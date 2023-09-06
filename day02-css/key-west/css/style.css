@@ -1,0 +1,73 @@
+* {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+html {
+    background-color: #444444;
+}
+
+img {
+    width: 500px;
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+img:hover {
+    opacity: 1;
+}
+
+h1,
+h2 {
+    color: white;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+strong {
+    font-size: 1.15rem;
+}
+
+li {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.top-5__list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+}
+
+a {
+    color: rgb(255, 245, 253, 0.5)
+}
+
+a:hover {
+    color: white;
+}
+
+button {
+    color: lightgray;
+    background-color: darkgray;
+    width: 40%;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    margin-top: 2rem;
+}
+
+.top-5__header {
+    color: lightgray;
+}
+
+.top-5__header.top-5__header--colorized {
+    color: pink;
+    font-size: 2rem;
+}

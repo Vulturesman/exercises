@@ -1,0 +1,44 @@
+* {
+    font-family: 'Lato', sans-serif;
+ }
+
+ body {
+    max-width: 450px;
+    border-left: 3px solid #2baadf; 
+    margin: 0 auto;
+    padding: 30px;
+ }
+
+ h2 {
+    margin-bottom: 0;
+ }
+
+.dates {
+    color: #cccccc;
+}
+
+img {
+    width: 450px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #2baadf;
+}
+
+a:hover { 
+    color: blue;
+    font-size: 120%;
+  }
+
+main {
+    margin-bottom: 50px;
+}
+
+.divider {
+    color: black;
+}
+
+.topic p {
+    color: #444444;
+ }

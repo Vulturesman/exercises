@@ -1,0 +1,32 @@
+.image-steve {
+    width: 300px;
+}
+
+h1 {
+    border-bottom: 1px solid #a2a9b1;
+}
+
+a {
+    text-decoration: none;
+}
+
+quote {
+    background-color: lightgray;
+    padding: 20px;
+    margin-left: 20px;
+    border: 1px solid gray;
+    max-width: 30%;
+}
+
+details {
+    background-color: #ccf;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid grey;
+}
+
+footer {
+    background-image: url(../img/computer.jpg);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}

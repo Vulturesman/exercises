@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Right Strongline';
+  src: url('../fonts/RightStrongline-Regular.woff2') format('woff2'),
+    url('../fonts/RightStrongline-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* This is how to define Self Hosted font
+font-face with defining name and url.
+then usage of this name where needed, eg. h1 
+- Download from DaFont eg. THen go to transfonter, here you can transform to 4 files.
+Demo, CSS - which has to be put here and adjusted URL.
+Two Woff files must be adjusted and linked correctly*/
+
+html {
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 18px;
+}
+
+/* First and primary font is Lato, another if Lato is not loaded will be Arial */
+
+body {
+  background-color: #ffffff;
+}
+
+article {
+  width: 50rem;
+  margin: 0 auto;
+}
+
+section {
+  padding: 0.5rem 2rem;
+}
+
+h1 {
+  font-size: 240%;
+  text-align: center;
+  font-family: "Right Strongline";
+}
+
+h2 {
+  font-size: 180%;
+}
+
+h1,
+h2 {
+  color: #23226c;
+  font-weight: 900;
+}
+
+p {
+  color: #555555;
+  line-height: 150%;
+  text-align: justify;
+}
+
+strong {
+  color: black;
+}
+
+em {
+  background-color: #d2d6ef;
+  font-style: normal;
+}
+
+a {
+  color: #6290c3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+.intro,
+.conclusion {
+  background-color: #d2d6ef;
+  font-family: "Roboto Slab", serif;
+}
