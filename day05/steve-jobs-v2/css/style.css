@@ -1,0 +1,47 @@
+nav {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 25%;
+}
+
+.quote {
+  background-color: lightgrey;
+  margin-left: 20px;
+  padding: 20px;
+  border: 1px solid gray;
+  max-width: 30%;
+}
+
+.external {
+  margin-top: 10px;
+  min-width: 600px;
+}
+
+details {
+  background-color: #ccf;
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid grey;
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-side {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
