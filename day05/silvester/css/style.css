@@ -1,0 +1,64 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'thisfontlookslikegiraffe';
+    src: url('/font/thisfontlookslikegiraffe.woff2') format('woff2'),
+        url('/font/thisfontlookslikegiraffe.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1,
+p {
+    font-family: "thisfontlookslikegiraffe";
+    color: white;
+}
+
+h1 {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    z-index: 1;
+    font-size: 4rem;
+    ;
+}
+
+p {
+    position: absolute;
+    top: 12rem;
+    width: 25rem;
+    left: 5rem;
+    font-size: 1.5rem;
+    font-weight: 200px;
+}
+
+.background {
+    position: relative;
+    z-index: 0;
+    width: 1000px;
+}
+
+.plates {
+    position: absolute;
+    z-index: -1;
+    top: 12rem;
+    right: -3rem;
+    width: 500px;
+    border-radius: 50%;
+}
+
+.elephant {
+    position: absolute;
+    top: 20rem;
+    right: 8rem;
+    width: 8rem;
+}

@@ -43,5 +43,10 @@ main {
 .text-side {
   display: flex;
   flex-direction: row;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
