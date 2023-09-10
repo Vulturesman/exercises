@@ -1,0 +1,8 @@
+p {
+    background: #ffffff url('/img/bodybuilder-dog.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 80%;
+    font-size: 3rem;
+    background-position: center;
+}
