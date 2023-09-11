@@ -18,6 +18,11 @@ body {
 main {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
+
+    /* this is important for responsive webpages, it takes empty space within the container and stretch it to 100% 
+    -> by this you doesn`t have to put height (eg nav and article (childs) because it will spreaded itself
+    */
 }
 
 
@@ -31,7 +36,6 @@ header {
 
 nav {
     background-color: #f06543;
-    min-height: 70vh;
     min-width: 20vw;
     text-align: center;
     padding-top: 2rem;
@@ -40,7 +44,6 @@ nav {
 }
 
 article {
-    min-height: 70vh;
     min-width: 80vw;
     padding: 2rem 5rem 0 5rem;
 }
@@ -67,3 +70,79 @@ footer {
     font-weight: 700;
     font-size: 2rem;
 }
+
+
+
+
+
+/* POSSIBLE SOLUTION FROM CBP
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #313638;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 3.5rem;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+nav {
+    background-color: #f06543;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 3.5rem;
+    font-weight: bold;
+}
+
+article {
+    padding: 3.5rem 7em;
+}
+
+article h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #424242;
+    border-bottom: 3px solid #a2a2a2;
+}
+
+article p {
+    color: #454545;
+    font-size: 1.125rem;
+    line-height: 1.5em;
+}
+
+footer {
+    background-color: #b3b3b3;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 3.5rem;
+    font-weight: bold;
+}
+ */
