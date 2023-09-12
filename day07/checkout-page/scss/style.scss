@@ -1,0 +1,180 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@import "variables";
+
+main {
+  font-family: $font-lato;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+@mixin cost {
+  color: $color-blue;
+  margin: 0rem;
+}
+
+@mixin heaading-5 {
+  text-transform: uppercase;
+  color: $color-gray;
+  margin: 0;
+}
+
+.white-box {
+  box-shadow: $shadow-lighter;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20rem;
+  width: 35rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .total {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 4rem;
+    .total-heading5 {
+      @include heaading-5;
+    }
+    #detail {
+      margin-top: 1.5rem;
+    }
+    .total-cost {
+      @include cost;
+    }
+    .total-products {
+      display: flex;
+      flex-direction: column;
+      .total-products__child {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        p {
+          margin: 0;
+          margin-right: 3rem;
+          opacity: 0.5;
+          font-size: 0.8rem;
+        }
+        h4 {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    button {
+      font-family: $font-lato;
+      font-weight: 700;
+      color: $color-blue;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      border-radius: 20px;
+      background: $color-white;
+      border: 1px solid $color-blue;
+      margin-top: 2.5rem;
+      &:hover {
+        font-weight: 900;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.card {
+  box-shadow: $shadow-darker;
+  height: 12rem;
+  width: 21rem;
+  background: $color-blue;
+  border-radius: 15px;
+  position: absolute;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card-content {
+    form {
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+        .card-left {
+          input {
+            width: 4rem;
+          }
+        }
+        .card-right {
+          input {
+            width: 6rem;
+          }
+        }
+      }
+      label {
+        color: $color-white;
+        opacity: 0.5;
+        font-size: 0.6rem;
+        margin-bottom: 0rem;
+      }
+      input {
+        background-color: rgba(237, 228, 219, 0.3);
+        color: white;
+        border: 0;
+        color: $color-white;
+        width: 100%;
+        height: 1.6rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 5px;
+        &::placeholder {
+          color: white;
+          opacity: 0.3;
+        }
+        &:focus {
+          background-color: rgba(237, 228, 219, 0.5);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .white-box {
+    width: 21rem;
+    justify-content: center;
+  }
+  .card {
+    position: static;
+  }
+}
+
+@media (min-width: 1100px) {
+  main {
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+  }
+
+  .white-box {
+    width: 21rem;
+    height: 30rem;
+    justify-content: center;
+    flex: 1;
+    font-size: 200%;
+  }
+  .card {
+    position: static;
+  }
+}
