@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// colors
+
+$white: #ffffff;
+$green: #54be90;
+$blue: #5782c2;
+$lightGray: #d3d3d3;
+
+// shadows
+
+$shadow: 0 0 6px #333333;
+
+// fonts
+$font-m: "Merriweather Sans", sans-serif;
+
+@import "controls.scss";
+@import "cards.scss";
+
+body {
+  background-image: url(/src/img/bg.jpg);
+  font-family: $font-m;
+  margin: 0;
+}
