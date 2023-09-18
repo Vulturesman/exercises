@@ -46,3 +46,38 @@
 // foo *= 2; // raises the value twice
 
 
+
+// Ternary operator
+// const number = 6;
+
+// console.log(number > 0 ? "number is positive" : "number is negative");
+
+
+// console.log(number % 2 ? 'odd' : 'even');
+
+
+
+// Arrow function
+
+// const sayHello = () => {
+//     console.log('Hello')
+// }
+ 
+// const say = (what) => {
+//     console.log(what)
+// }
+
+
+// Full
+// const add = (a, b) => {
+//     return a + b;
+// }
+
+// Shortened
+// const addSMall = (a, b) => a + b;
+
+const paragraph = document.getElementById("intro");
+
+console.log(paragraph);
+
+paragraph.style = "color: red";
