@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.bulb__on {
+    width: 250px;
+    height: 450px;
+    background-image: url('./img/bulb-on.png');
+    background-position: center;
+    cursor: pointer;
+}
+
+.bulb__off {
+    width: 250px;
+    height: 450px;
+    background-image: url('./img/bulb-off.png');
+    background-position: center;
+    cursor: pointer;
+}

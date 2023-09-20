@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proper login</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="login-form">
+      <div class="login-form__messages"></div>
+
+      <div class="login-form__form-group">
+        <label class="login-form__label">Email</label>
+
+        <input class="login-form__input" type="email" name="email" />
+      </div>
+
+      <div class="login-form__form-group">
+        <label class="login-form__label">Password</label>
+
+        <input class="login-form__input" type="password" name="password" />
+      </div>
+
+      <div class="login-form__form-group">
+        <button class="login-form__submit" onclick="tryLogin()">Log in</button>
+      </div>
+    </div>
+  </body>
+</html>
