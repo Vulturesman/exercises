@@ -52,19 +52,31 @@ max3(67, 20, 9);
 // }
 
 const spread3 = (a, b, c) => {
-  if (a > b && a > c) {
-    return console.log("The biggest number is a: " + a);
-  } else if (b > a && b > c) {
-    return console.log("The biggest number is b: " + b);
-  } else {
-    return console.log("The biggest number is c: " + c);
-  }
+  let max = Math.max(a, b, c);
+  let min = Math.min(a, b, c);
 
-  if (a > b && a > c) {
-    return console.log("The biggest number is a: " + a);
-  } else if (b > a && b > c) {
-    return console.log("The biggest number is b: " + b);
-  } else {
-    return console.log("The biggest number is c: " + c);
-  }
+  return console.log(max - min + " that is the difference.");
 };
+
+spread3(51, 10, 80);
+
+// ---------------------------------
+// or
+// const spread3 = (a, b, c) => {
+//   if (a > b) {
+//     if (b > c) {
+//       return a - c;
+//     } else if (c > a) {
+//       return b - c;
+//     }
+//     return a - b;
+//   }
+
+//   if (c > b) {
+//     return c - a;
+//   } else if (c > a) {
+//     return b - a;
+//   }
+
+//   return b - c;
+// }
