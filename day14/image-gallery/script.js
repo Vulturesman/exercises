@@ -32,9 +32,12 @@ for (let i = 0; i < urls.length; i++) {
     </div>`;
 }
 
-// gallery.forEach((item, index) => {
-//   gallery.innerHTML += `<div class="image">
-//         <img src=${urls} alt=${names}>
-//         <div class="image__description">${names}</div>
-//     </div>`;
-// });
+// --------------------------------------------
+// or
+
+data.forEach((image) => {
+  gallery.innerHTML += `<div class="image">
+<img src=${image[0]} alt=${image[1]}>
+<div class="image__description">${image[1]}</div>
+</div>`;
+});
