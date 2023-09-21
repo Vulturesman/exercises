@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Salary Calculator</h1>
+    <h3>Enter your details to calculate your salary.</h3>
+
+    <form>
+      <label for="hourly-pay">Insert Your Hourly Pay</label>
+      <input type="number" placeholder="$xxx" id="hourly-pay" />
+      <br />
+
+      <label for="hours-day">Insert Your Daily Hours</label>
+      <input type="number" placeholder="Hours per day" id="hours-day" />
+      <br />
+
+      <label for="days-month">Insert Your Working Days a Month</label>
+      <input type="number" placeholder="Days a Month" id="days-month" />
+    </form>
+
+    <button onclick="salaryCalculator()">Calculate!</button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<!-- 
+-----------------------------------
+or
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proper salary calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1 class="salary-calculator__headline">Salary calculator</h1>
+
+    <div class="salary-calculator">
+
+        <div class="salary-calculator__form">
+
+            <div class="salary-calculator__form-group">
+
+                <label class="salary-calculator__label">Hourly pay</label>
+
+                <input class="salary-calculator__input" type="number" name="hourly_pay" value="">
+
+            </div>
+
+            <div class="salary-calculator__form-group">
+
+                <label class="salary-calculator__label">Work hours per day</label>
+
+                <input class="salary-calculator__input" type="number" name="hours_per_day" value="">
+
+            </div>
+
+            <div class="salary-calculator__form-group">
+
+                <label class="salary-calculator__label">Work days in month</label>
+
+                <input class="salary-calculator__input" type="number" name="days_in_month" value="">
+
+            </div>
+
+            <div class="salary-calculator__form-group">
+
+                <button class="salary-calculator__submit-button" onclick="calculate()">Calculate</button>
+
+            </div>
+
+        </div>
+
+        <div class="salary-calculator__results">
+
+            <div class="salary-calculator__cta">
+                Please fill-in the form on the left side and press the "Calculate" button
+            </div>
+
+            <div id="hourly-pay-result" class="salary-calculator__result">
+
+                <div class="salary-calculator__result-name">Hourly pay</div>
+
+                <div class="salary-calculator__result-value"></div>
+
+            </div>
+
+            <div id="work-hours-result" class="salary-calculator__result">
+
+                <div class="salary-calculator__result-name">Daily work hours</div>
+
+                <div class="salary-calculator__result-value"></div>
+
+            </div>
+
+            <div id="work-days-result" class="salary-calculator__result">
+
+                <div class="salary-calculator__result-name">Work days</div>
+
+                <div class="salary-calculator__result-value"></div>
+
+            </div>
+
+            <div id="total-result" class="salary-calculator__result salary-calculator__result_total">
+
+                <div class="salary-calculator__result-name">Total</div>
+
+                <div class="salary-calculator__result-value"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html> -->

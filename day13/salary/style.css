@@ -1,0 +1,118 @@
+body {
+    margin: 5rem;
+}
+
+input {
+    margin-bottom: 1.5rem;
+}
+
+
+/* --------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.salary-calculator {
+    display: flex;
+    width: 600px;
+}
+
+.salary-calculator__headline {
+    font-weight: 100;
+    text-transform: uppercase;
+    width: 600px;
+}
+
+.salary-calculator__form {
+    padding-right: 1em;
+}
+
+.salary-calculator__form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.salary-calculator__label {
+    font-size: 0.75em;
+    margin: 1em 0 0.5em;
+}
+
+.salary-calculator__input {
+    font-size: 1.5em;
+    width: 5.6em;
+}
+
+.salary-calculator__submit-button {
+    margin-top: 1.5em;
+    background-color: green;
+    color: white;
+    border: 0;
+    padding: 0.5em 3em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.salary-calculator__results {
+    flex: 1;
+    padding-left: 1em;
+    border-left: 1px solid silver;
+    display: flex;
+    flex-direction: column;
+}
+
+.salary-calculator__cta {
+    font-size: 1.125em;
+    line-height: 1.5em;
+    margin-top: 1.675rem;
+}
+
+.salary-calculator__results .salary-calculator__result,
+.salary-calculator__results_ready .salary-calculator__cta {
+    display: none;
+}
+
+.salary-calculator__results_ready .salary-calculator__result {
+    display: flex;
+}
+
+.salary-calculator__result {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.salary-calculator__result_total {
+    font-weight: 600;
+    border-top: 1px dotted black;
+    padding-top: 0.5em;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.salary-calculator__result-name {
+    font-size: 0.875em;
+    margin-bottom: 0.25em;
+}
+
+.salary-calculator__result-value {
+    font-size: 1.5em;
+}
+
+.salary-calculator__result_total .salary-calculator__result-value {
+    font-size: 2em;
+} */
