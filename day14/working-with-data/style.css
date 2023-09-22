@@ -1,0 +1,25 @@
+li {
+    padding: 1rem;
+}
+
+li:nth-child(even) {
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+.person-name-css {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.search input {
+    border-radius: 5px;
+    height: 2rem;
+}

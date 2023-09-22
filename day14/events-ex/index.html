@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 20rem;
+      }
+      button {
+        margin-top: 5rem;
+        width: 20%;
+        height: 5rem;
+        background-color: lightgreen;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="stop" id="stop" src="./img/stop-on.svg" alt="stoplight on" />
+    <img class="walk" id="walk" src="./img/walk-off.svg" alt="walk off" />
+    <button id="btn" onclick="lightsToggle()">PRESS TO WALK</button>
+    <script src="./script.js"></script>
+  </body>
+</html>

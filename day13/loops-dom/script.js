@@ -126,3 +126,32 @@ const noCats = tags.filter((tag) => {
 console.log(noCats);
 
 // Using JavaScript, use innerHTML to create a list item in the <ul> there, one for each image, with the alt tag as the contents of the <li>.
+
+const images10 = document.querySelectorAll(".gallery img");
+const listOfPhotos = document.querySelector(".list-of-photos__list");
+
+images10.forEach((image) => {
+  const altValue = image.getAttribute("alt");
+  listOfPhotos.innerHTML += `<li>${altValue}</li>`;
+});
+
+/* or document.querySelectorAll('.gallery img').forEach(image => {
+    document.querySelector('.list-of-photos__list').innerHTML += `<li>${image.getAttribute('alt')}</li>`;
+})
+
+-------------------
+
+const images = document.querySelectorAll('.gallery img');
+const alts = [];
+ 
+images.forEach(image => {
+    alts.push( image.getAttribute('alt') );
+})
+ 
+const list = document.querySelector('.list-of-photos__list');
+ 
+alts.forEach(alt => {
+    list.innerHTML += '<li>' + alt + '</li>';
+})
+
+*/
