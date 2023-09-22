@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.list {
+    max-width: 12rem;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
