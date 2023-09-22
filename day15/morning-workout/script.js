@@ -15,6 +15,5 @@ mouseText.addEventListener("mouseleave", () => {
 
 mouseText.addEventListener("click", () => {
   mouseText.className = "padlock padlock_clicked";
-  classText.className = "text text_visible";
   isClicked = true;
 });

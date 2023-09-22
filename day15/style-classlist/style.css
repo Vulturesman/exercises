@@ -1,0 +1,29 @@
+.alerts {
+    display: flex;
+}
+
+.alert {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert__text {
+    font-size: 16px;
+}
+
+.alert__close {
+    float: right;
+    cursor: pointer;
+}
+
+.alert.clicked {
+    background-color: green;
+    color: white;
+}
+
+.alert.hidden {
+    display: none;
+}
