@@ -47,6 +47,55 @@ const groceryList = [
 
 const listDiv = document.querySelector(".list");
 
-groceryList.forEach((groceryItem) => {
-  listDiv.innerHTML += `<div class="item">${groceryItem.name}, pieces: ${groceryItem.amount}</div>`;
+const generateList = () => {
+  listDiv.innerHTML = "";
+  groceryList.forEach((groceryItem) => {
+    listDiv.innerHTML += `<div class="item">${groceryItem.name}, pieces: ${groceryItem.amount} <span class="delete">X</span></div>`;
+  });
+};
+
+generateList();
+
+const addItem = () => {
+  const newText = document.getElementById("newItem").value;
+  const newAmount = document.getElementById("newAmount").value;
+
+  groceryList.push({
+    name: newText,
+    amount: newAmount,
+  });
+
+  generateList();
+};
+
+const deleteItem = document.querySelectorAll(".delete");
+deleteItem.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    groceryList.splice(i, 1);
+    generateList();
+  });
 });
+
+/* possible solution:
+----
+ listDiv.innerHTML += `<div class="item">${newText}, pieces: ${newAmount} <span class="delete">X</span></div>`;
+
+----
+
+const btnAdd = document.querySelector('#btn-add');
+btnAdd.addEventListener('click', (e) => {
+  const itemName = document.querySelector('#name-input').value;
+  const itemAmount = document.querySelector('#amount-input').value;
+  items.push(
+    { 
+      name: itemName,
+      amount: itemAmount,
+    }
+  );
+  renderItems();
+  e.preventDefault();
+});
+
+renderItems();
+
+*/

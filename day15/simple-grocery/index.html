@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <form class="itemsAdd">
+      <label for="newItem">Add New Item</label>
+      <input type="text" name="newItem" id="newItem" placeholder="Title..." />
+      <label for="newAmount">Add Amount in Nr.</label>
+      <input type="number" name="newAmount" id="newAmount" />
+    </form>
+    <button onclick="addItem()" id="myBtn">Add</button>
     <div class="list" id="list"></div>
     <script src="./script.js"></script>
   </body>
