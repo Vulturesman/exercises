@@ -1,10 +1,11 @@
 import { conversation } from "./data";
-import { prepareMessageHTML } from "./functions";
+import { Conversation } from "./classes/Conversation";
 
 const conversationElem = document.querySelector(".conversation");
+const conversationObject = new Conversation(conversationElem);
 
 conversation.forEach((message, index) => {
   setTimeout(() => {
-    conversationElem.innerHTML += prepareMessageHTML(message);
+    conversationObject.addMessage(message);
   }, 2000 * index);
 });
