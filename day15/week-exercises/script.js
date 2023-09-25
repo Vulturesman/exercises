@@ -198,3 +198,108 @@ The resulting HTML might look like this.
 </ul>
 
 */
+
+const displayItems = (bag) => {
+  const ul = document.querySelector("ul.items");
+
+  bag.items.forEach((item) => {
+    const list = document.createElement("li");
+    ul.appendChild(list);
+    list.innerText = `${item.name} (${item.amount})`;
+    list.classList.add("items__item");
+  });
+};
+
+displayItems(shopping_cart);
+
+/*
+First make sure to remove all contents of the <ul class="items"> element at the beginning of the displayItems function.
+Then add a call to the function displayItems also when the <button class="remove-cheapest"> button is clicked (at the end of that process).
+Clicking the button should now see items disappearing from the list.
+
+*/
+
+const remove_btn = document.querySelector(".remove-cheapest");
+
+remove_btn.addEventListener("click", () => {
+  let cheapest = null;
+  let cheapest_index = null;
+  shopping_cart.items.forEach((item, index) => {
+    if (cheapest === null || item.price < cheapest.price) {
+      cheapest = item;
+      cheapest_index = index;
+    }
+  });
+
+  shopping_cart.items.splice(cheapest_index, 1);
+
+  console.log(shopping_cart);
+  displayItems2(shopping_cart);
+});
+
+const displayItems2 = (cart) => {
+  const ul = document.querySelector(".items");
+  ul.innerHTML = "";
+
+  cart.items.forEach((item) => {
+    const li = document.createElement("li");
+    ul.appendChild(li);
+    li.innerText = item.name + " " + item.amount;
+    li.classList.add("items__item");
+  });
+};
+
+displayItems2(shopping_cart);
+
+/*
+To your HTML code add this:
+<input class="item-name-input" type="text" name="name" value="" placeholder="Item name">
+<input class="item-amount-input" type="text" name="amount" value="" placeholder="Item amount">
+<input class="item-price-input" type="number" name="price" value="" placeholder="Item price">
+<button class="add-item">Add to cart</button>
+Write JavaScript code so that when the button "Add to cart" is clicked, a new item object will be added to the shopping_cart.items containing the relevant information from the input fields.
+At the end of that process, make sure to call displayItems again.
+Clicking the "Add to cart" button should now keep adding items into the list.
+
+*/
+
+const add_btn = document.querySelector(".add-item");
+
+add_btn.addEventListener("click", () => {
+  const name_input_value = document.querySelector(".item-name-input").value;
+  const amount_input_value = document.querySelector(".item-amount-input").value;
+  const price_input_value = document.querySelector(".item-price-input").value;
+
+  if (
+    name_input_value != "" &&
+    amount_input_value != "" &&
+    price_input_value != ""
+  ) {
+    const new_item = {
+      name: name_input_value,
+      amount: amount_input_value,
+      price: price_input_value,
+    };
+
+    shopping_cart.items.push(new_item);
+    displayItems2(shopping_cart);
+
+    document.querySelector(".item-name-input").value = "";
+    document.querySelector(".item-amount-input").value = "";
+    document.querySelector(".item-price-input").value = "";
+  }
+});
+
+// In the previous process, write a condition, so that if any of the input fields are empty (contain a falsy value), the item will NOT be added to the items.
+
+//  if (
+//     name_input_value != "" &&
+//     amount_input_value != "" &&
+//     price_input_value != ""
+//   )
+
+// In the previous process, make it so that when the item is successfully added to the items, the input fields are cleared (their value attributes reset to "")
+
+//  document.querySelector(".item-name-input").value = "";
+//  document.querySelector(".item-amount-input").value = "";
+//  document.querySelector(".item-price-input").value = "";
