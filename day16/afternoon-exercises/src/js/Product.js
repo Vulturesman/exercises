@@ -7,7 +7,7 @@ class Product {
 
   sell() {
     if (this.quantity > 0) {
-      this.quantity--;
+      this.quantity -= 1;
     }
   }
 
