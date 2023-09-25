@@ -115,6 +115,11 @@ const cart = {
       amount: 1,
       price: 29,
     },
+    {
+      name: "testik",
+      amount: 3,
+      price: 17,
+    },
   ],
 };
 
@@ -122,7 +127,74 @@ const cart = {
 /*
 cart = object;
 cart.total = object;
+cart.total.amount = number;
+cart.items = array;
+cart.items[0] = object;
+cart.items[0].name = string;
+cart.items[0].amount = string;
+cart.items[1].amount = number;
+*/
 
+let stringifyCart = JSON.stringify(cart);
+console.log(stringifyCart);
 
+const shopping_cart = JSON.parse(stringifyCart);
+console.log(shopping_cart);
+
+/*
+Declare a variable named cheapest and initialize it with the value null.
+Then use .forEach to loop through the array shopping_cart.items. Your goal is to find the cheapest of the products in the cart and put it into the variable cheapest.
+In the end, log the value of cheapest into the console. It should show this object:
+{
+    name: 'Cinnamon',
+    amount: 1,
+    price: 29
+}
+*/
+
+let cheapest = null;
+shopping_cart.items.forEach((item) => {
+  if (cheapest === null || item.price < cheapest.price) {
+    cheapest = item;
+  }
+});
+console.log(cheapest);
+
+/*
+In your HTML code, create a new button like this:
+<button class="remove-cheapest">Remove cheapest product</button>
+Write JavaScript code so that when the button is clicked, the cheapest of the products in the shopping_cart constant is found and removed from shopping_cart.items.
+Also after clicking of the button, log the value of shopping_cart into the console. You should see the object of "Cinnamon" disappear.
+
+buttonRemove.addEventListener();
+*/
+
+const buttonRemove = document.querySelector("button.remove-cheapest");
+
+buttonRemove.addEventListener("click", () => {
+  let cheapest2 = null;
+  let cheapest2Index = null;
+  shopping_cart.items.forEach((item, index) => {
+    if (cheapest2 === null || item.price < cheapest2.price) {
+      cheapest2 = item;
+      cheapest2Index = index;
+    }
+  });
+  shopping_cart.items.splice(cheapest2Index, 1);
+
+  console.log(shopping_cart);
+});
+
+/*
+In the HTML of your page, add this element:
+<ul class="items"></ul>
+Declare a function displayItems which will accept one argument - an object similar to the one that we have in constants cart and shopping_cart.
+The function is supposed to create HTML <li> elements within the <ul class="items"> element, one for each of the items in the cart.
+Then call the function, passing the shopping_cart to it as argument like this: displayItems(shopping_cart).
+The resulting HTML might look like this.
+<ul class="items">
+    <li class="items__item">Apples (2kg)</li>
+    <li class="items__item">Cinnamon (1)</li>
+</ul>
 
 */
