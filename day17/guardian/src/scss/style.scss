@@ -1,0 +1,17 @@
+.navigation > a {
+  margin: 1rem;
+  text-transform: uppercase;
+  border: 1px solid blueviolet;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+a:hover {
+  color: rgb(3, 115, 235);
+  background-color: rgb(200, 225, 232);
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+}
