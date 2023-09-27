@@ -1,11 +1,41 @@
 .box {
-
-    // state of the box before the animation
-
+  // state of the box before the animation
 }
 
 .box--animated {
+  // apply the animation here
+  position: absolute;
+  background-color: rgb(18, 17, 17);
+  animation-name: slidein;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-iteration-count: 5;
+}
 
-    // apply the animation here
+@keyframes slidein {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
 
+  20% {
+    left: 10px;
+    top: 10px;
+  }
+
+  40%,
+  60% {
+    left: 400px;
+    top: 400px;
+  }
+
+  80% {
+    left: 600px;
+  }
+
+  100% {
+    left: 500px;
+    top: 500px;
+  }
 }
