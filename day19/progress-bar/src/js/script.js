@@ -17,6 +17,8 @@ colorBtn.addEventListener("click", () => {
   const bar3 = progressObject3.value;
 
   const btnMix = `rgb(${bar1 * 15}, ${bar2 * 15}, ${bar3 * 15})`;
-  console.log(this, btnMix);
   document.querySelector(".colorBtn").style.backgroundColor = `${btnMix}`;
+  if (bar1 + bar2 + bar3 > 30) {
+    document.querySelector(".colorBtn").style.color = `black`;
+  }
 });
