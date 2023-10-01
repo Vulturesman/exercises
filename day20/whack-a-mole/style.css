@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #389f0a;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 640px;
+    background-color: #5ae717;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hole {
+    width: 33%;
+    height: 10rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hole-img {
+    width: 70%;
+    height: 100%;
+    background: url('./img/hole.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    z-index: 1;
+}
+
+.mole {
+    width: 50%;
+    height: 50%;
+    background: url('./img/mole.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hole.active .mole {
+    top: 3.75rem;
+}
+
+.heading,
+.score {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading {
+    color: white
+}
+
+.button {
+    color: #235e07;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+
+.score {
+    margin-top: 2rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
