@@ -52,9 +52,11 @@ $messages = [
 
             <?php endforeach; ?>
 
+        </ul>
+
     <?php endif; ?>
 
-        </ul>
+       
 </body>
 </html>
 

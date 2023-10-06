@@ -16,20 +16,24 @@ $vehicles = [
 <body>
     <h1><?= $title ?></h1>
 
-    <?php foreach ($vehicles as $type => $speed) : ?>
-<table>
-    <tr>
-        <th>Means of transport</th>
-        <th>Max. speed (km/h)</th>
-    <tr>
-    <tr>
-        <td><?= $type ?></td>
-        <td><?= $speed ?></td>
-    </tr>
-</table>
+        <table>
+            <tr>
+                <th>Means of transport</th>
+                <th>Max. speed (km/h)</th>
+            <tr>
 
+            <?php foreach ($vehicles as $type => $speed) : ?>
 
-        <?php endforeach; ?>
+            <tr>
+                <td><?= $type ?></td>
+                <td><?= $speed ?></td>
+            </tr>
+
+            <?php endforeach; ?>
+            
+        </table>
+
+        
 </body>
 </html>
 
