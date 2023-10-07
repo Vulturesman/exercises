@@ -1,5 +1,5 @@
 <?php 
-    for($i = 0; $i < 4; $i++) { ?>           
-        <div class="white"></div>
-        <div class="black"></div>     
+    for($j = 0; $j < 4; $j++) { ?>           
+        <div class="black"></div>
+        <div class="white"></div>     
     <?php } ?>
