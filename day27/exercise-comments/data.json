@@ -1,0 +1,37 @@
+{
+  "1": {
+    "name": "Jakub",
+    "email": "kozler@gmail.com",
+    "comment": "I think this is just a bullshit...",
+    "timestamp": "10-10-2023 07:17:16",
+    "id": 1
+  },
+  "2": {
+    "name": "Jakub",
+    "email": "kozler@gmail.com",
+    "comment": "I think this is just a bullshit...",
+    "timestamp": "10-10-2023 07:17:57",
+    "id": 2
+  },
+  "3": {
+    "name": "Jakub",
+    "email": "debil@gmail.com",
+    "comment": "hello, just testing\r\n",
+    "timestamp": "10-10-2023 07:19:22",
+    "id": 3
+  },
+  "4": {
+    "name": "Anicka",
+    "email": "zalud@gmail.com",
+    "comment": "Another test, not deprecated??",
+    "timestamp": "10-10-2023 07:21:02",
+    "id": 4
+  },
+  "5": {
+    "name": "Angry",
+    "email": "jakub@test.cz",
+    "comment": "Dalsi zkouska? Ukazuje succes?",
+    "timestamp": "10-10-2023 07:22:21",
+    "id": 5
+  }
+}

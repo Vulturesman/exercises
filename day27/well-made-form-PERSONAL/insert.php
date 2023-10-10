@@ -2,25 +2,29 @@
 
 require_once 'bootstrap.php';
 
-
 // validation
 $valid = true;
 $errors = [];
 
 if (empty($_POST['name'])) {
     $valid = false;
-    $errors[] = 'Name is a required field.';
+    $errors[] = 'Name is a required field!';
 }
 
 if (!is_numeric($_POST['length'])) {
     $valid = false;
-    $errors[] = 'Length must be a number.';
+    $errors[] = 'Length must be a number!';
 }
 
 if ($valid === false) {
 
     session()->flash('errors', $errors);
     session()->flashRequest();
+
+    // session_start();
+    // $_SESSION['errors'] = $errors;
+    // $_SESSION['request_data'] = $_POST;
+
     header('Location: create.php');
     exit();
 }
@@ -44,12 +48,15 @@ $song->album    = $_POST['album'] ?? $song->album;
 // somehow insert the entity into the database and generate a unique ID
 // here done using DBBlackbox
 $id = insert($song);
-
 // $song->save();
 
-session()->flash('success_message', 'Song was successfully saved.');
+//session_start();
 
-//                edit.php?id=5
+session()->flash('success_message', 'Song was successfully saved.');
+// $_SESSION['success_message'] = 'Song was successfully saved.';
+
+//          once finished, go to edit.php?id=5 - for example
 header('Location: edit.php?id=' . $id);
 
+// optional, as we are at the end anyway...
 exit();

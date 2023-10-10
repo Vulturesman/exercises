@@ -5,13 +5,33 @@ require_once 'bootstrap.php';
 // prepare an empty entity
 $song = new Song;
 
+// $session = session();
+// $session = Session::instance();
+// session_start();
+
+$errors = session()->get('errors', []);
+// $old_request_data = session()->get('request_data', []);
+
+
+// unset($_SESSION['errors']);
+// unset($_SESSION['request_data']);
+
 ?>
 
 <h1>Create a new song</h1>
 
 <a href="list.php">Back to list</a>
 
-<?php include 'alerts.php'; ?>
+
+<?php if ($errors) : ?>
+
+    <?php foreach ($errors as $error) : ?>
+        <div class="error-message">
+            <?= $error ?>
+        </div>
+    <?php endforeach; ?>
+
+<?php endif; ?>
 
 <form action="insert.php" method="post">
 
@@ -26,7 +46,7 @@ $song = new Song;
     <br>
 
     Length:<br>
-    <input type="text" name="length" value="<?= htmlspecialchars((string) old('length', $song->length)  ) ?>"> seconds<br>
+    <input type="number" name="length" value="<?= htmlspecialchars((string) old('length', $song->length)) ?>"> seconds<br>
     <br>
 
     Album:<br>

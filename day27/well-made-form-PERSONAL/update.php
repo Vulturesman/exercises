@@ -2,31 +2,8 @@
 
 require_once 'bootstrap.php';
 
-
 // find the ID of the record we want to edit in the request
 $id = $_GET['id'];
-
-// validation
-$valid = true;
-$errors = [];
-
-if (empty($_POST['name'])) {
-    $valid = false;
-    $errors[] = 'Name is a required field.';
-}
-
-if (!is_numeric($_POST['length'])) {
-    $valid = false;
-    $errors[] = 'Length must be a number.';
-}
-
-if ($valid === false) {
-
-    session()->flash('errors', $errors);
-    session()->flashRequest();
-    header('Location: edit.php?id='.$id);
-    exit();
-}
 
 // somehow retrieve existing data from some storage
 $song = find( $id, 'Song' );
@@ -41,13 +18,12 @@ $song->album    = $_POST['album'] ?? $song->album;
 // update($id, $song);
 $song->save();
 
-// for the next request (for edit.php)
-session()->flash('success_message', 'Song was successfully saved.');
+// session_start();
 
-// in this request, success_message is not yet in the session
-$success_message = session()->get('success_message'); // null
+// $_SESSION['success_message'] = 'Song was successfully updated.';
 
-// redirect to edit.php
+session()->flash('success_message', 'Song was succesfully updated.');
+
 header('Location: edit.php?id=' . $id);
 
 exit();

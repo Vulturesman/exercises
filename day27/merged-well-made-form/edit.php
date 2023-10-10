@@ -2,18 +2,41 @@
 
 require_once 'bootstrap.php';
 
-// prepare an empty entity
-$song = new Song;
+
+// find the ID of the record we want to edit in the request
+// if it is there
+$id = $_GET['id'] ?? null;
+
+if ($id) {
+    // edit
+    $song = find( $id, 'Song' );
+} else {
+    // create
+    $song = new Song;
+}
+
+// take the value of success_message from the session if it is there
+$success_message = session()->get('success_message', null);
+
+$errors = session()->get('errors', []);
 
 ?>
 
-<h1>Create a new song</h1>
+<?php if ($id) : ?>
+    <h1>Edit a song</h1>
+<?php else : ?>
+    <h1>Create a new song</h1>
+<?php endif; ?>
 
 <a href="list.php">Back to list</a>
 
 <?php include 'alerts.php'; ?>
 
-<form action="insert.php" method="post">
+<?php if ($id) : ?>
+    <form action="store.php?id=<?= $id ?>" method="post">
+<?php else : ?>
+    <form action="store.php" method="post">
+<?php endif; ?>
 
     <!-- display the form prefilled with entity data -->
 
