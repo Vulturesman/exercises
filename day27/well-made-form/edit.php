@@ -9,11 +9,26 @@ $id = $_GET['id'];
 // somehow retrieve existing song from some storage
 $song = find( $id, 'Song' );
 
+// In the receiving script (after redirect), start the session so we can work with $_SESSION
+session_start();
+
+// take the value of success_message from the session if it is there
+$success_message = $_SESSION['success_message'] ?? null;
+
+// delete the success_message from the session == "flashing"
+unset($_SESSION['success_message']);
+
 ?>
 
 <h1>Edit a song</h1>
 
 <a href="list.php">Back to list</a>
+
+<?php if ($success_message) : ?>
+ 
+    <div class="success-message"><?= $success_message ?></div>
+ 
+<?php endif; ?>
 
 <form action="update.php?id=<?= $id ?>" method="post">
 

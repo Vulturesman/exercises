@@ -19,6 +19,10 @@ $song->album    = $_POST['album'] ?? $song->album;
 // update($id, $song);
 $song->save();
 
+session_start();
+
+$_SESSION['success_message'] = 'Song was successfully updated.';
+
 header('Location: edit.php?id=' . $id);
 
 exit();

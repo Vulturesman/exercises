@@ -23,6 +23,10 @@ $song->album    = $_POST['album'] ?? $song->album;
 $id = insert($song);
 // $song->save();
 
+session_start();
+
+$_SESSION['success_message'] = 'Song was successfully saved.';
+
 //          once finished, go to edit.php?id=5 - for example
 header('Location: edit.php?id=' . $id);
 

@@ -31,7 +31,14 @@
     "id": 5,
     "name": "Wonderwall",
     "author": "Oasis",
-    "length": 298,
+    "length": 297,
     "album": "What`s the Story"
+  },
+  "6": {
+    "id": 6,
+    "name": "Rock Or Bust",
+    "author": "ACDC",
+    "length": 234,
+    "album": "N/A"
   }
 }
