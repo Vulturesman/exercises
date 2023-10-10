@@ -32,6 +32,12 @@ class Session
 
         // store all the data currently in the session in this object's property
         $this->data = $_SESSION;
+
+        // adds the contents of $_SESSION['flashed_data'] (if there are any) to $this->data
+        $this->data = array_merge($this->data, $_SESSION['flashed_data'] ?? []);
+        
+        // deletes flashed_data from the session
+        unset($_SESSION['flashed_data']);
     }
 
     // puts a value into the $this->data property under specific key
@@ -48,5 +54,12 @@ class Session
     public function get($key, $default = null)
     {
         return $this->data[$key] ?? $default;
+    }
+
+    // puts the value under the given key into 'flashed_data' element of the session data
+    // like that, if the entire 'flashed_data' element is removed from the session, all the flashed data will be gone!
+    public function flash($key, $value)
+    {
+        $_SESSION['flashed_data'][$key] = $value;
     }
 }

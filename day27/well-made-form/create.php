@@ -13,8 +13,8 @@ $errors = session()->get('errors', []);
 $old_request_data = session()->get('request_data', []);
 
 
-unset($_SESSION['errors']);
-unset($_SESSION['request_data']);
+// unset($_SESSION['errors']);
+// unset($_SESSION['request_data']);
 
 ?>
 

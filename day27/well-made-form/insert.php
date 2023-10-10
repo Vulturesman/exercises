@@ -18,8 +18,8 @@ if (!is_numeric($_POST['length'])) {
 
 if ($valid === false) {
 
-    session()->put('errors', $errors);
-    session()->put('request_data', $_POST);
+    session()->flash('errors', $errors);
+    session()->flash('request_data', $_POST);
 
     // session_start();
     // $_SESSION['errors'] = $errors;
@@ -52,7 +52,7 @@ $id = insert($song);
 
 //session_start();
 
-session()->put('success_message', 'Song was successfully saved.');
+session()->flash('success_message', 'Song was successfully saved.');
 // $_SESSION['success_message'] = 'Song was successfully saved.';
 
 //          once finished, go to edit.php?id=5 - for example

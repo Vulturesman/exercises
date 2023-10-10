@@ -9,13 +9,13 @@ $id = $_GET['id'];
 $song = find( $id, 'Song' );
 
 // In the receiving script (after redirect), start the session so we can work with $_SESSION
-session_start();
+// session_start(); // done automatically now when calling session() for the first time
 
 // take the value of success_message from the session if it is there
-$success_message = $_SESSION['success_message'] ?? null;
+$success_message = session()->get('success_message', null);
 
 // delete the success_message from the session == "flashing"
-unset($_SESSION['success_message']);
+// unset($_SESSION['success_message']);
 
 ?>
 
