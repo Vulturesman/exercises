@@ -10,3 +10,9 @@ function session()
 {
     return Session::instance();
 }
+
+// alias for Session::instance()->old()
+function old($key, $default = null)
+{
+    return session()->old($key, $default);
+}

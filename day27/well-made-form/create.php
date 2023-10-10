@@ -10,7 +10,7 @@ $song = new Song;
 // session_start();
 
 $errors = session()->get('errors', []);
-$old_request_data = session()->get('request_data', []);
+// $old_request_data = session()->get('request_data', []);
 
 
 // unset($_SESSION['errors']);
@@ -38,19 +38,19 @@ $old_request_data = session()->get('request_data', []);
     <!-- display the form prefilled with entity data -->
 
     Name:<br>
-    <input type="text" name="name" value="<?= htmlspecialchars((string) ($old_request_data['name'] ?? $song->name)) ?>"><br>
+    <input type="text" name="name" value="<?= htmlspecialchars((string) old('name', $song->name)) ?>"><br>
     <br>
 
     Author:<br>
-    <input type="text" name="author" value="<?= htmlspecialchars((string)($old_request_data['author'] ?? $song->author)) ?>"><br>
+    <input type="text" name="author" value="<?= htmlspecialchars((string) old('author', $song->author)) ?>"><br>
     <br>
 
     Length:<br>
-    <input type="number" name="length" value="<?= htmlspecialchars((string) ($old_request_data['length'] ??  $song->length)) ?>"> seconds<br>
+    <input type="number" name="length" value="<?= htmlspecialchars((string) old('length', $song->length)) ?>"> seconds<br>
     <br>
 
     Album:<br>
-    <input type="text" name="album" value="<?= htmlspecialchars((string)($old_request_data['album'] ?? $song->album)) ?>"
+    <input type="text" name="album" value="<?= htmlspecialchars((string) old('album', $song->album)) ?>"
         placeholder="Please fill in the album"
     ><br>
     <br>

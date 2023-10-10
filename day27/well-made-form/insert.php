@@ -19,7 +19,7 @@ if (!is_numeric($_POST['length'])) {
 if ($valid === false) {
 
     session()->flash('errors', $errors);
-    session()->flash('request_data', $_POST);
+    session()->flashRequest();
 
     // session_start();
     // $_SESSION['errors'] = $errors;
