@@ -1,9 +1,20 @@
 <?php
 
-require_once 'Song.php';
+require_once 'bootstrap.php';
 
 // prepare an empty entity
 $song = new Song;
+
+// $session = session();
+// $session = Session::instance();
+// session_start();
+
+$errors = session()->get('errors', []);
+$old_request_data = session()->get('request_data', []);
+
+
+unset($_SESSION['errors']);
+unset($_SESSION['request_data']);
 
 ?>
 
@@ -11,24 +22,35 @@ $song = new Song;
 
 <a href="list.php">Back to list</a>
 
+
+<?php if ($errors) : ?>
+
+    <?php foreach ($errors as $error) : ?>
+        <div class="error-message">
+            <?= $error ?>
+        </div>
+    <?php endforeach; ?>
+
+<?php endif; ?>
+
 <form action="insert.php" method="post">
 
     <!-- display the form prefilled with entity data -->
 
     Name:<br>
-    <input type="text" name="name" value="<?= htmlspecialchars((string)$song->name) ?>"><br>
+    <input type="text" name="name" value="<?= htmlspecialchars((string) ($old_request_data['name'] ?? $song->name)) ?>"><br>
     <br>
 
     Author:<br>
-    <input type="text" name="author" value="<?= htmlspecialchars((string)$song->author) ?>"><br>
+    <input type="text" name="author" value="<?= htmlspecialchars((string)($old_request_data['author'] ?? $song->author)) ?>"><br>
     <br>
 
     Length:<br>
-    <input type="number" name="length" value="<?= htmlspecialchars((string)$song->length) ?>"> seconds<br>
+    <input type="number" name="length" value="<?= htmlspecialchars((string) ($old_request_data['length'] ??  $song->length)) ?>"> seconds<br>
     <br>
 
     Album:<br>
-    <input type="text" name="album" value="<?= htmlspecialchars((string)$song->album) ?>"
+    <input type="text" name="album" value="<?= htmlspecialchars((string)($old_request_data['album'] ?? $song->album)) ?>"
         placeholder="Please fill in the album"
     ><br>
     <br>

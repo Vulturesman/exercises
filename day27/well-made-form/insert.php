@@ -1,7 +1,6 @@
 <?php
 
-require_once 'Song.php';
-require_once 'DBBlackbox.php';
+require_once 'bootstrap.php';
 
 // validation
 $valid = true;
@@ -9,7 +8,7 @@ $errors = [];
 
 if (empty($_POST['name'])) {
     $valid = false;
-    $errors[] = 'Name is required field!';
+    $errors[] = 'Name is a required field!';
 }
 
 if (!is_numeric($_POST['length'])) {
@@ -18,9 +17,13 @@ if (!is_numeric($_POST['length'])) {
 }
 
 if ($valid === false) {
-    session_start();
-    $_SESSION['errors'] = $errors;
-    $_SESSION['request_data'] = $_POST;
+
+    session()->put('errors', $errors);
+    session()->put('request_data', $_POST);
+
+    // session_start();
+    // $_SESSION['errors'] = $errors;
+    // $_SESSION['request_data'] = $_POST;
 
     header('Location: create.php');
     exit();
@@ -47,9 +50,10 @@ $song->album    = $_POST['album'] ?? $song->album;
 $id = insert($song);
 // $song->save();
 
-session_start();
+//session_start();
 
-$_SESSION['success_message'] = 'Song was successfully saved.';
+session()->put('success_message', 'Song was successfully saved.');
+// $_SESSION['success_message'] = 'Song was successfully saved.';
 
 //          once finished, go to edit.php?id=5 - for example
 header('Location: edit.php?id=' . $id);

@@ -1,7 +1,6 @@
 <?php
 
-require_once 'Song.php';
-require_once 'DBBlackbox.php';
+require_once 'bootstrap.php';
 
 $songs = select(10, 0, 'Song');
 
