@@ -3,6 +3,30 @@
 require_once 'Song.php';
 require_once 'DBBlackbox.php';
 
+// validation
+$valid = true;
+$errors = [];
+
+if (empty($_POST['name'])) {
+    $valid = false;
+    $errors[] = 'Name is required field!';
+}
+
+if (!is_numeric($_POST['length'])) {
+    $valid = false;
+    $errors[] = 'Length must be a number!';
+}
+
+if ($valid === false) {
+    session_start();
+    $_SESSION['errors'] = $errors;
+    $_SESSION['request_data'] = $_POST;
+
+    header('Location: create.php');
+    exit();
+}
+
+
 // prepare empty entity
 $song = new Song;
 
