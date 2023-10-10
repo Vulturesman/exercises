@@ -4,7 +4,7 @@ class AudioTrack
 {
     // to get rid of the deprecation error when using DBBlackbox.php
     public ?int $id = null;
-    
+
     public ?string $title = null;
     public ?string $author = null;
     public int $length = 0;
@@ -33,5 +33,10 @@ class AudioTrack
     public function next()
     {
 
+    }
+
+    public function insert()
+    {
+        $this->id = insert($this);
     }
 }

@@ -1,0 +1,23 @@
+{
+  "1": {
+    "id": 1,
+    "first_name": "Lenny",
+    "last_name": "Kravitz",
+    "year_of_birth": 1964,
+    "genre": "Rock"
+  },
+  "2": {
+    "id": 2,
+    "first_name": "Maneskin",
+    "last_name": "unknown",
+    "year_of_birth": 2016,
+    "genre": "Glam Rock"
+  },
+  "3": {
+    "id": 3,
+    "first_name": "Liam",
+    "last_name": "Gallagher",
+    "year_of_birth": 1972,
+    "genre": "Rock n' Roll"
+  }
+}

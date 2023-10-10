@@ -1,0 +1,16 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Angry",
+    "author": "Rolling Stones",
+    "length": 227,
+    "album": "Hackney Diamonds"
+  },
+  "2": {
+    "id": 2,
+    "name": "Robbers",
+    "author": "The 1975",
+    "length": 255,
+    "album": "The 1975"
+  }
+}
