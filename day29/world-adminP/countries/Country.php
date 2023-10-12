@@ -14,4 +14,12 @@ class Country
     public $gnp = null;
     public $head_of_state = null;
     public $capital_city_id = null;
+
+    public function insert()
+    {
+        DB::insert("INSERT INTO `countries` (`name`, `continent`, `population`)
+        VALUES (?,?,?)", [$this->name, $this->continent, $this->population]);
+
+        $this->id = DB::getPdo()->lastInsertId();
+    }
 }
