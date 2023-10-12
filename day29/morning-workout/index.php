@@ -28,7 +28,7 @@ foreach ($old_array as $person) {
     $new_array[] = $new_person;
 };
 
-
+// map method
 $new_array2 = array_map(function ($person) {
     return [
         'full_name' => $person['name'] . ' ' . $person['surname'],
