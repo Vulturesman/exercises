@@ -11,11 +11,23 @@ $city = new City();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <style>
+        .success-message {
+            color: red;
+            background-color: lightgreen;
+        }
+
+        .error-message {
+            background-color: red;
+            color: white;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create</title>
 </head>
 <body>
+    <?php include './alerts.php' ?>
     <h1>Create a city</h1>
 
    <form method="post" action="insert.php">

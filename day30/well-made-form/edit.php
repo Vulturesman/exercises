@@ -20,11 +20,23 @@ $city = DB::selectOne('
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <style>
+        .success-message {
+            color: red;
+            background-color: lightgreen;
+        }
+
+        .error-message {
+            background-color: red;
+            color: white;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit</title>
 </head>
 <body>
+    <?php include './alerts.php' ?>
     <h1>Edit a city</h1>
 
     <form method="post" action="update.php?id=<?= $id ?>">
@@ -39,7 +51,7 @@ $city = DB::selectOne('
         <br>
         <input type="submit" value="Edit">
     </form>
-    
+
     <a href="list.php">Back to List</a>
 </body>
 </html>

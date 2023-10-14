@@ -8,8 +8,34 @@ if ($id === null) {
     header("Location: list.php");
     exit;
 }
+// validation
+$valid = true;
+$errors = [];
 
-//Optionally, if id was not found in $_GET, you can redirect the user somewhere else. They should not be here.
+if (empty($_POST['name'])) {
+    $valid = false;
+    $errors[] = 'Name is a required field.';
+}
+
+if (!is_numeric($_POST['population'])) {
+    $valid = false;
+    $errors[] = 'Population must be a number and is required.';
+}
+
+if (empty($_POST['district'])) {
+    $valid = false;
+    $errors[] = 'District is a required field.';
+}
+
+
+if (!$valid) {
+    session()->flash('errors', $errors);
+    session()->flashRequest();
+    header('Location: edit.php?id='.$id);
+    exit();
+}
+
+
 
 $city = DB::selectOne('
     SELECT *
@@ -38,5 +64,6 @@ DB::update("
     ]
 );
 
+session()->flash('success_message', 'The record was successfully edited');
 header("Location: edit.php?id=$id");
 exit;
