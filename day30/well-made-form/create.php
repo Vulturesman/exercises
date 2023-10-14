@@ -30,5 +30,7 @@ $city = new City();
         <br>
         <input type="submit" value="Create">
    </form>
+
+   <a href="list.php">Back to List</a>
 </body>
 </html>

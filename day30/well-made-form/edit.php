@@ -40,5 +40,6 @@ $city = DB::selectOne('
         <input type="submit" value="Edit">
     </form>
     
+    <a href="list.php">Back to List</a>
 </body>
 </html>
