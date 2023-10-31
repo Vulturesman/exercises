@@ -1,5 +1,8 @@
 .box {
     height: 100px;
     width: 100px;
-    background-color: black
+    background-color: black;
+    border-radius: 10px;
+    z-index: -1;
+    border: 1px solid white;
 }
