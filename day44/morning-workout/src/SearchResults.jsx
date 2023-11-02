@@ -1,11 +1,10 @@
 export default function SearchResults ( {searchResults} ) {
 
-    console.log(searchResults)
+   // console.log(searchResults)
 
     return (
            
                 <table>
-
                     <thead>
                         <tr>
                             <th>Result:</th>
@@ -26,7 +25,6 @@ export default function SearchResults ( {searchResults} ) {
                         </tr>
                             ))}
                     </tbody>
-
                 </table>
                             
         )

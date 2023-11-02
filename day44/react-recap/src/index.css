@@ -1,0 +1,119 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.country-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.country-card:hover {
+  transform: scale(1.05);
+}
+
+.country-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.country-details {
+  padding: 12px;
+}
+
+.country-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.country-info {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+/*
+search-bar
+*/
+
+/* Main search container style */
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+  margin: 0 auto 20px auto;
+  max-width: 1200px;
+  border-radius: 5px;
+  width: 300px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field style */
+.search-container input[type="text"] {
+  flex-grow: 1;
+  /* Allows the input to take up available space */
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Search button style */
+.search-container button {
+  background-color: #3C3B6E;
+  /* Dark shade of blue */
+  color: #FFFFFF;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-container button:hover {
+  background-color: #2A2950;
+  /* Slightly darker shade for hover */
+}
+
+/* Placeholder style */
+::placeholder {
+  color: #B0B0B0;
+  /* Light gray color */
+  opacity: 1;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .country-card {
+    max-width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .country-card {
+    max-width: 100%;
+  }
+}
