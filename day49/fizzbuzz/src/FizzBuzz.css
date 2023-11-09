@@ -1,0 +1,28 @@
+.fizzbuzz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fizzbuzz-list {
+    list-style: none;
+    padding: 0;
+}
+
+.fizzbuzz-list li {
+    padding: 8px 16px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.fizzbuzz-list li:nth-child(odd) {
+    background-color: #e9ecef;
+}
